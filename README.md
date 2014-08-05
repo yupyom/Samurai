@@ -73,5 +73,7 @@ Package Controlには登録していませんので、Githubリポジトリを�
 2. メニューから、`Preferences->Package Settings->Package Control->Settings - User`を開き、repositories から `https://github.com/yupyom/Samurai.git` の一行を削除。
 
 ## 更新情報
+- 2014-08-05 (v1.0.1)
+メインメニューから環境設定ファイルにアクセス可能にしました。
 - 2014-08-05 (v1.0.0)
 初期バージョンを公開
