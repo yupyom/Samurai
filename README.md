@@ -63,14 +63,14 @@ Package Controlには登録していませんので、Githubリポジトリを�
 1. Package Control から Add Repository を実行。  
 ウィンドウ下部にリポジトリパスの入力エリアが出現するので、下記を入力。  
 
-    https://github.com/yupyom/samurai.git
+    https://github.com/yupyom/Samurai.git
 
 2. Install Package を実行し、Samurai をインストール。
 
 ## アンインストール
 
 1. Package Control から Remove Package を実行し、Samurai をアンインストール。  
-2. メニューから、`Preferences->Package Settings->Package Control->Settings - User`を開き、repositories から `https://github.com/yupyom/samurai.git` の一行を削除。
+2. メニューから、`Preferences->Package Settings->Package Control->Settings - User`を開き、repositories から `https://github.com/yupyom/Samurai.git` の一行を削除。
 
 ## 更新情報
 - 2014-08-05 (v1.0.0)
