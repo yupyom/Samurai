@@ -1,0 +1,6 @@
+{
+  "highlight_full_pitch_characters": true,
+  "highlight_unicode_dependent_characters": true,
+  "highlight_platform_dependent_characters": true,
+  "highlight_uncompatible_platform_dependent_characters": true
+}

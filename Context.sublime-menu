@@ -1,0 +1,72 @@
+[
+  {
+    "caption": "Samurai",
+    "children":
+    [
+        {
+          "caption": "全角英数字を半角に変換",
+          "command": "alnum_normalize"
+        },
+        {
+          "caption": "機種依存文字を変換表で変換",
+          "command": "convert_safe_string"
+        },
+        {
+          "caption": "Unicode依存文字の標準化（NFKC）",
+          "command": "unicode_normalize"
+        },
+        {
+          "caption": "互換性のない文字をゲタに",
+          "command": "uncompatible_getalize"
+        },
+        {
+          "caption": "選択範囲をHTML数値文字参照に変換",
+          "command": "numerical_character_reference"
+        },
+        {
+          "caption": "-"
+        },
+        {
+          "caption": "選択範囲をクリップボードの各行へ置換",
+          "command": "region_paste"
+        },
+        {
+          "caption": "クリップボードからHTMLアンカーを生成",
+          "command": "anchor_paste"
+        },
+        {
+          "caption": "-"
+        },
+        {
+          "caption": "選択行から重複を取り除く",
+          "command": "uniq"
+        },
+        {
+          "caption": "選択行から重複のみを抽出",
+          "command": "overlap"
+        },
+        {
+          "caption": "-"
+        },
+        {
+          "caption": "選択行をカンマ区切りに",
+          "command": "lines_to_commas"
+        },
+        {
+          "caption": "カンマ区切りを複数行に",
+          "command": "commas_to_lines"
+        },
+        {
+          "caption": "-"
+        },
+        {
+          "caption": "選択行をタブ区切りに",
+          "command": "lines_to_tabs"
+        },
+        {
+          "caption": "タブ区切りを複数行に",
+          "command": "tabs_to_lines"
+        }
+    ]
+  }
+]
