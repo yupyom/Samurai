@@ -101,7 +101,7 @@ class RegionTsvPasteCommand(sublime_plugin.TextCommand):
 class TsvToTableCommand(sublime_plugin.TextCommand):
   def run(self, edit):
     html = ""
-    lines = sublime.get_clipboard().split("\n")
+    lines = sublime.get_clipboard().strip().split("\n")
     for line in lines:
       columns = line.split("\t")
       parts = ""
