@@ -26,9 +26,17 @@
         {
           "caption": "-"
         },
+        //{
+        //  "caption": "選択範囲をクリップボードの各行で置換",
+        //  "command": "region_row_paste"
+        //},
         {
-          "caption": "選択範囲をクリップボードの各行へ置換",
-          "command": "region_paste"
+          "caption": "選択範囲をクリップボードの行列で置換",
+          "command": "region_tsv_paste"
+        },
+        {
+          "caption": "クリップボードの行列からHTMLテーブルを生成",
+          "command": "tsv_to_table"
         },
         {
           "caption": "クリップボードからHTMLアンカーを生成",

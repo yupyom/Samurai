@@ -68,7 +68,7 @@ class HighlightCharactersListener(sublime_plugin.EventListener):
 
 #######################################################################
 
-class RegionPasteCommand(sublime_plugin.TextCommand):
+class RegionRowPasteCommand(sublime_plugin.TextCommand):
   def run(self, edit):
     list_replacements = sublime.get_clipboard().split("\n")
     num_of_reps = len(list_replacements)
@@ -80,6 +80,38 @@ class RegionPasteCommand(sublime_plugin.TextCommand):
         else:
           print("Placeholder["+str(i)+"] is not replaced.")
         i+=1
+
+#------------------------------------------------------------------------
+
+class RegionTsvPasteCommand(sublime_plugin.TextCommand):
+  def run(self, edit):
+    list_replacements = re.split(u"[\n\t]",sublime.get_clipboard().strip())
+    num_of_reps = len(list_replacements)
+    i = 0
+    for my_selection in self.view.sel():
+      if not my_selection.empty():
+        if i < num_of_reps:
+          self.view.replace(edit, my_selection, list_replacements[i])
+        else:
+          print("Placeholder["+str(i)+"] is not replaced.")
+        i+=1
+
+#---------------------------------------------------------------------#
+
+class TsvToTableCommand(sublime_plugin.TextCommand):
+  def run(self, edit):
+    html = ""
+    lines = sublime.get_clipboard().split("\n")
+    for line in lines:
+      columns = line.split("\t")
+      parts = ""
+      for column in columns:
+        parts += "\t\t<td>%s</td>\n" % column.strip()
+      html += "\t<tr>\n%s\t</tr>\n" % parts
+    html = "<table>\n%s</table>" % html
+    self.view.insert(edit, self.view.sel()[0].a, html)
+
+#---------------------------------------------------------------------#
 
 class AnchorPasteCommand(sublime_plugin.TextCommand):
   def run(self, edit):
