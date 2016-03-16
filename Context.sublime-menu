@@ -4,6 +4,17 @@
     "children":
     [
         {
+          "caption": "HTMLルビを振る",
+          "command": "ruby"
+        },
+        {
+          "caption": "HTMLルビを外す",
+          "command": "deruby"
+        },
+        {
+          "caption": "-"
+        },
+        {
           "caption": "全角英数字を半角に変換",
           "command": "alnum_normalize"
         },
