@@ -96,6 +96,8 @@ Package Controlには登録していませんので、Githubリポジトリを�
 2. メニューから、`Preferences->Package Settings->Package Control->Settings - User`を開き、repositories から `https://github.com/yupyom/Samurai.git` の一行を削除。
 
 ## 更新情報
+- 2016-03-16 (v1.0.3)
+HTMLルビを振る、外すの機能を追加しました。
 - 2014-08-05 (v1.0.2)
 クリップボードの処理に関する機能を追加変更しました。
 - 2014-08-05 (v1.0.1)
