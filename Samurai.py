@@ -183,6 +183,25 @@ class LinesToTabsCommand(sublime_plugin.TextCommand):
     self.view.replace(edit, my_selection, '\t'.join(my_list))
 
 #######################################################################
+
+class RubyCommand(sublime_plugin.TextCommand):
+  def run(self, edit):
+    my_selection = self.view.sel()[0]
+    my_text = self.view.substr(my_selection)
+    new_text = re.sub(ur"([々〇〻\u3400-\u9FFF\uF900-\uFAFF]+)（([ぁ-んー]+)）", ur"<ruby>\1<rt>\2</rt></ruby>", my_text)
+    new_text = re.sub(ur"（）", ur"", new_text)
+    if not my_selection.empty():
+      self.view.replace(edit, my_selection, new_text)
+
+class DerubyCommand(sublime_plugin.TextCommand):
+  def run(self, edit):
+    my_selection = self.view.sel()[0]
+    my_text = self.view.substr(my_selection)
+    new_text = re.sub(ur"<ruby>(?:<rb>)?([^<>]+)(?:</rb>)?(?:<rt>[^<>]+</rt>)</ruby>", ur"\1", my_text)
+    if not my_selection.empty():
+      self.view.replace(edit, my_selection, new_text)
+
+#######################################################################
 # utility function
 def replace(self, edit, find_str, replace_str):
   my_selection = self.view.sel()[0]
