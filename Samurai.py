@@ -188,12 +188,8 @@ class RubyCommand(sublime_plugin.TextCommand):
   def run(self, edit):
     my_selection = self.view.sel()[0]
     my_text = self.view.substr(my_selection)
-    search_pattern_1 = u"([々〇〻\u3400-\u9FFF\uF900-\uFAFF]+)（([ぁ-んー]+)）"
-    replace_pattern_1 = u"<ruby>\1<rt>\2</rt></ruby>"
-    new_text = re.sub(search_pattern_1, replace_pattern_1, my_text)
-    search_pattern_2 = u"（）"
-    replace_pattern_2 = u""
-    new_text = re.sub(search_pattern_2, replace_pattern_2, new_text)
+    new_text = re.sub(r"([々〇〻\u3400-\u9FFF\uF900-\uFAFF]+)（([ぁ-んー]+)）", r"<ruby>\1<rt>\2</rt></ruby>", my_text)
+    new_text = re.sub(r"（）", "", new_text)
     if not my_selection.empty():
       self.view.replace(edit, my_selection, new_text)
 
@@ -201,9 +197,7 @@ class DerubyCommand(sublime_plugin.TextCommand):
   def run(self, edit):
     my_selection = self.view.sel()[0]
     my_text = self.view.substr(my_selection)
-    search_pattern = u"<ruby>(?:<rb>)?([^<>]+)(?:</rb>)?(?:<rt>[^<>]+</rt>)</ruby>"
-    replace_pattern = u"\1"
-    new_text = re.sub(search_pattern, replace_pattern, my_text)
+    new_text = re.sub(r"<ruby>(?:<rb>)?([^<>]+)(?:</rb>)?(?:<rt>[^<>]+</rt>)</ruby>", r"\1", my_text)
     if not my_selection.empty():
       self.view.replace(edit, my_selection, new_text)
 
