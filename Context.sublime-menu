@@ -4,10 +4,12 @@
     "children":
     [
         {
+          "id": "Ruby",
           "caption": "HTMLルビを振る",
           "command": "ruby"
         },
         {
+          "id": "Deruby",
           "caption": "HTMLルビを外す",
           "command": "deruby"
         },
@@ -15,22 +17,27 @@
           "caption": "-"
         },
         {
+          "id": "AlnumNormalize",
           "caption": "全角英数字を半角に変換",
           "command": "alnum_normalize"
         },
         {
+          "id": "ConvertSafeString",
           "caption": "機種依存文字を変換表で変換",
           "command": "convert_safe_string"
         },
         {
+          "id": "UnicodeNormalize",
           "caption": "Unicode依存文字の標準化（NFKC）",
           "command": "unicode_normalize"
         },
         {
+          "id": "UncompatibleGetalize",
           "caption": "互換性のない文字をゲタに",
           "command": "uncompatible_getalize"
         },
         {
+          "id": "NumericalCharacterReference",
           "caption": "選択範囲をHTML数値文字参照に変換",
           "command": "numerical_character_reference"
         },
@@ -42,14 +49,17 @@
         //  "command": "region_row_paste"
         //},
         {
+          "id": "RegionTsvPaste",
           "caption": "選択範囲をクリップボードの行列で置換",
           "command": "region_tsv_paste"
         },
         {
+          "id": "TsvToTable",
           "caption": "クリップボードの行列からHTMLテーブルを生成",
           "command": "tsv_to_table"
         },
         {
+          "id": "AnchorPaste",
           "caption": "クリップボードからHTMLアンカーを生成",
           "command": "anchor_paste"
         },
@@ -57,10 +67,12 @@
           "caption": "-"
         },
         {
+          "id": "Uniq",
           "caption": "選択行から重複を取り除く",
           "command": "uniq"
         },
         {
+          "id": "Overlap",
           "caption": "選択行から重複のみを抽出",
           "command": "overlap"
         },
@@ -68,10 +80,12 @@
           "caption": "-"
         },
         {
+          "id": "LinesToCommas",
           "caption": "選択行をカンマ区切りに",
           "command": "lines_to_commas"
         },
         {
+          "id": "CommasToLines",
           "caption": "カンマ区切りを複数行に",
           "command": "commas_to_lines"
         },
@@ -79,10 +93,12 @@
           "caption": "-"
         },
         {
+          "id": "LinesToTabs",
           "caption": "選択行をタブ区切りに",
           "command": "lines_to_tabs"
         },
         {
+          "id": "TabsToLines",
           "caption": "タブ区切りを複数行に",
           "command": "tabs_to_lines"
         }
