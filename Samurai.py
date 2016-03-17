@@ -14,6 +14,7 @@ class HighlightCharactersListener(sublime_plugin.EventListener):
         view.add_regions('FullPitchWhiteSpaceHighlight',
                          view.find_all(pattern),
                          "comment",
+                         "",
                          sublime.DRAW_OUTLINED)
 
     # highlight unicode dependent characters
@@ -22,6 +23,7 @@ class HighlightCharactersListener(sublime_plugin.EventListener):
         view.add_regions('UnicodeDependentCharactersHighlight',
                          view.find_all(pattern),
                          "string",
+                         "",
                          sublime.DRAW_OUTLINED)
 
     # highlight platform dependent characters
@@ -30,6 +32,7 @@ class HighlightCharactersListener(sublime_plugin.EventListener):
         view.add_regions('PlatformDependentCharactersHighlight',
                          view.find_all(pattern),
                          "string",
+                         "",
                          sublime.DRAW_EMPTY_AS_OVERWRITE)
 
     # highlight uncompatible platform dependent characters
@@ -38,6 +41,7 @@ class HighlightCharactersListener(sublime_plugin.EventListener):
         view.add_regions('UncompatiblePlatformDependentCharactersHighlight',
                          view.find_all(pattern),
                          "invalid",
+                         "",
                          sublime.DRAW_EMPTY_AS_OVERWRITE)
 
     # highlight characters
