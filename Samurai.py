@@ -7,7 +7,7 @@ from itertools import groupby
 #######################################################################
 
 class HighlightCharactersListener(sublime_plugin.EventListener):
-    SETTINGS = sublime.load_settings('samurai.sublime-settings')
+    SETTINGS = sublime.load_settings('Samurai.sublime-settings')
     # highlight full-pitch characters
     def highlight_fullpitch_characters(self, view):
         pattern = u'[　０-９Ａ-Ｚａ-ｚ]'
